@@ -21,7 +21,7 @@ fprintf(fid,'#SBATCH -t 20:59:59\n');
 fprintf(fid,['#SBATCH --array=1-' num2str(noruns) '\n\n']);
 fprintf(fid,['#SBATCH -o ' './logs/log_' num2str(jobind) '_%%a\n']);
 fprintf(fid,'#SBATCH --qos=normal\n\n');
-fprintf(fid,'#SBATCH --mem-per-cpu=31000\n\n');
+fprintf(fid,'#SBATCH --mem-per-cpu=10000\n\n');
 
 %fprintf(fid,'module load matlab\n');
 fprintf(fid,'sleep .$[( $RANDOM %% 10 ) ]s\n\n'); % Sleep for a random amount of time, so that the rng will give different seed
