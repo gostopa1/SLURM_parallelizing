@@ -6,8 +6,11 @@ nojobs=220;
 delete jobs/*
 delete logs/*
 
-ind=function_make_script_array(['perm=0;mms=''32mm'';test_classify_tps2'],nojobs,ind)
-ind=function_make_script_array(['perm=1;mms=''32mm'';test_classify_tps2'],nojobs,ind)
+% To run an example script
+ind=function_make_script_array(['test_script'],nojobs,ind)
+
+%ind=function_make_script_array(['perm=0;mms=''32mm'';test_classify_tps2'],nojobs,ind)
+%ind=function_make_script_array(['perm=1;mms=''32mm'';test_classify_tps2'],nojobs,ind)
 
 %ind=function_make_parallel_scripts('perm=0;test_classify_tps',nojobs,ind)
 %ind=function_make_parallel_scripts('perm=1;test_classify_tps',nojobs,ind)
