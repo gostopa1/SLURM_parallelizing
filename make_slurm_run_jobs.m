@@ -3,7 +3,7 @@ function make_slurm_run_jobs
 % to run all the jobs that are located within the ./jobs folder
 curpath=pwd
 fid=fopen('slurm_run_jobs_auto.sh','w');
-s
+
 fprintf(fid,'#!/bin/sh\n\n');
 
 fprintf(fid,'chmod 755 %s/jobs/*\n\n',curpath);
