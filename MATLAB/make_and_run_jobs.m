@@ -1,5 +1,5 @@
 ind=1000;
-nojobs=220;
+nojobs=10;
 
 delete jobs/*
 delete logs/*
