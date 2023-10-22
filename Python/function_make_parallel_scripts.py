@@ -33,7 +33,7 @@ def function_make_parallel_scripts(script='echo "Test Run"',noruns=10,jobind=0):
         f.write('#SBATCH -o ./logs/log_' + str(jobind) + '\n')
         f.write("#SBATCH --qos=normal\n\n")
         f.write("#SBATCH --mem-per-cpu=31000\n\n")
-        f.write('cd '+ curpath + '; ' + script)
+        f.write('echo' + script + '; cd '+ curpath + '; ' + script)
         f.close()
     return jobind
 
