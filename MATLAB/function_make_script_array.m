@@ -20,7 +20,7 @@ fprintf(fid,'#SBATCH --qos=normal\n\n');
 fprintf(fid,'#SBATCH --mem-per-cpu=10000\n\n');
 
 fprintf(fid,'sleep .$[( $RANDOM %% 10 ) ]s\n\n'); % Sleep for a random amount of time, so that the rng will give different seed
-fprintf(fid,['echo ' scriptToRun '; matlab -nojvm -r "cd ' pwd '/;rng(''shuffle'');' scriptToRun ';exit;"']); % for 32mm
+fprintf(fid,['echo "' scriptToRun '"; matlab -nojvm -r "cd ' pwd '/;rng(''shuffle'');' scriptToRun ';exit;"']); % for 32mm
 
 fclose(fid);
 display('Done making jobs!')

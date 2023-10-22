@@ -23,7 +23,7 @@ for repsi=1:noruns
     % Submit the current job, run in MATLAB no GUI mode, cd to current
     % directory, initialize the random seed and run the requested script.
     % Then exit
-    fprintf(fid,['echo ' scriptToRun '; matlab -nojvm -r "cd ' pwd '/;rng(' num2str(randi(100000)) ');' scriptToRun ';exit;"']); % for 32mm
+    fprintf(fid,['echo "' scriptToRun '" ; matlab -nojvm -r "cd ' pwd '/;rng(' num2str(randi(100000)) ');' scriptToRun ';exit;"']); % for 32mm
 
     fclose(fid);
 end
